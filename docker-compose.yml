@@ -1,0 +1,11 @@
+version: '2'
+services:
+  pypi:
+    image: codekoala/pypi
+    volumes:
+    - ./pypi:/srv/pypi
+    container_name: pypi
+    environment:
+      PYPI_EXTRA: --fallback-url https://pypi.tuna.tsinghua.edu.cn/simple/
+    ports:
+    - 9527:80
